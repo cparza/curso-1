@@ -1,9 +1,5 @@
 from django.shortcuts import render
-
-
-
-# def hello_blog(request):
-#     return render(request, 'index.html')
+from .models import Post
 
 def hello_blog(request):
     lista = [
@@ -12,8 +8,14 @@ def hello_blog(request):
         'Systemctl'
     ]
 
-    data = {'name': 'Curso de Django 3',
-    'lista_tecnologias': lista
-    }
+    list_posts = Post.objects.all()
+
+    data = {
+            'name': 'Curso de Django 3',
+            'lista_tecnoloias':lista,
+            'posts': list_posts
+        }
+
     return render(request, 'index.html', data)
+
 

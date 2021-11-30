@@ -1,18 +1,22 @@
 <h1>Blog</h1>
 
-
 {{ name }}
 
 <ol>
 {% for item in lista_tecnologias %}
+
     {% if item == 'Django' %}
         <li><b>{{ item }}</b></li>
-        {% else %}
+    {% else %}
         <li>{{ item }}</li>
     {% endif %}
 
 {% endfor %}
 </ol>
 
-<!-- {{ lista_tecnologias }} -->
+<ul>
+{% for post in posts %}
+        <li>{{ post.title }}</li>
+{% endfor %}
+</ul>
 
