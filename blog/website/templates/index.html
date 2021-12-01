@@ -14,9 +14,11 @@
 {% endfor %}
 </ol>
 
-<ul>
 {% for post in posts %}
-        <li>{{ post.title }}</li>
+       <h2> {{post.title}} </h2>
+       <h3> {{post.sub_title}} </h3>
+        <h2> {{post.title}} </h2>
+        <p>{{ post.content }}</p>
 {% endfor %}
 </ul>
 
